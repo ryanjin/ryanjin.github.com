@@ -3,7 +3,38 @@
   <channel>
     <title>Blog Title</title>
     <link>http://rebecca.me</link>
-    <pubDate>2013-04-30 11:19:43 +0800</pubDate>
+    <pubDate>2013-05-08 06:11:37 +0800</pubDate>
+    <item>
+      <title>Rapberry Pi 使用DHT22测量温度适度</title>
+      <link>http://rebecca.me/default/Rapberry-Pi-%E4%BD%BF%E7%94%A8DHT22%E6%B5%8B%E9%87%8F%E6%B8%A9%E5%BA%A6%E9%80%82%E5%BA%A6/</link>
+      <pubDate>2013-05-08 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;淘宝购买的一批零件今天到货了，包括DHT22,红外，光感，lcd等。&lt;/p&gt;
+
+&lt;p&gt;先把DHT22替换再用的DHT11。&lt;/p&gt;
+
+&lt;p&gt;先说一下，为什么需要DHT22,原先用的DHT11不错就是精度太低，目测精度是1读，这下曲线就不怎么好看了，基本这个曲线是平的，所以用DHT22替换，怎么说DHT22精度也有0。1度把。&lt;/p&gt;
+
+&lt;p&gt;记得有个地方看到篇博文，说DHT11和DHT22几乎兼容，于是，接下来，把DHT22替换上去。&lt;/p&gt;
+
+&lt;p&gt;先执行了一把测温度的程序，悲剧，读出来的4个值显然和DHT11的不一样。&lt;/p&gt;
+
+&lt;p&gt;无奈，上Github上着了一份DHT22的代码，原来DHT22读出来的数据比DHT11更精确因此需要按照一定的算法转换。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;float t, h;
+h = (float)dht22_dat[0] * 256 + (float)dht22_dat[1];
+h /= 10;
+t = (float)(dht22_dat[2] &amp;amp; 0x7F)* 256 + (float)dht22_dat[3];
+t /= 10.0;
+if ((dht22_dat[2] &amp;amp; 0x80) != 0)  t *= -1;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这下没问题了。偶也！！&lt;/p&gt;
+
+&lt;h2&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;1 &lt;a href=&#34;https://github.com/technion/lol_dht22/blob/master/dht22.c&#34;&gt;DHT22 代码&lt;/a&gt; 使用WiringPi&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>安装Fswebcam</title>
       <link>http://rebecca.me/raspberry/%E5%AE%89%E8%A3%85Fswebcam/</link>
