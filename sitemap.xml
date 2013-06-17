@@ -4,12 +4,17 @@
 		<loc>http://rebecca.me/</loc>
 	</url>
 	<url>
-		<loc>http://rebecca.me/default/Rapberry-Pi-%E4%BD%BF%E7%94%A8DHT22%E6%B5%8B%E9%87%8F%E6%B8%A9%E5%BA%A6%E9%80%82%E5%BA%A6/</loc>
+		<loc>http://rebecca.me/驾校/%E5%AD%A6%E8%BD%A6%E7%AC%AC%E4%B8%80%E5%A4%A9/</loc>
+		<lastmod>2013-06-10</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://rebecca.me/pi/Rapberry-Pi-%E4%BD%BF%E7%94%A8DHT22%E6%B5%8B%E9%87%8F%E6%B8%A9%E5%BA%A6%E9%80%82%E5%BA%A6/</loc>
 		<lastmod>2013-05-08</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://rebecca.me/raspberry/%E5%AE%89%E8%A3%85Fswebcam/</loc>
+		<loc>http://rebecca.me/pi/%E5%AE%89%E8%A3%85Fswebcam/</loc>
 		<lastmod>2013-04-30</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
